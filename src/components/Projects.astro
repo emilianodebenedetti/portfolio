@@ -1,0 +1,104 @@
+---
+import HTML from './icons/HTML.astro';
+import CSS from './icons/CSS.astro';
+import JavaScript from './icons/JavaScript.astro';
+import NodeJs from './icons/NodeJs.astro'
+import ReactJs from './icons/ReactJs.astro'
+import Tailwind from './icons/Tailwind.astro'
+import Java from './icons/Java.astro'
+import Firebase from './icons/Firebase.astro'
+
+const TAGS = {
+    HTML: {
+        name: 'HTML',
+        icon: HTML,
+    },
+    CSS: {
+        name: 'CSS',
+        icon: CSS,
+    },
+    JavaScript: {
+        name: 'JavaScript',
+        icon: JavaScript
+    },
+    NodeJs: {
+        name: 'Node Js',
+        icon: NodeJs
+    },
+    ReactJs: {
+        name: 'React JS',
+        icon: ReactJs
+    },
+    Tailwind: {
+        name: 'Tailwind',
+        icon: Tailwind 
+    },
+    Java: {
+        name: 'Java',
+        icon: Java
+    },
+    Firebase: {
+        name: 'Firebase',
+        icon: Firebase
+    } 
+
+}
+const PROJECTS = [
+    {
+        title: 'E-Commerce DEMO',
+        description: 'Tienda web creada con React Js, Tailwind y Firebase como base de datos y storage para las imágenes. La orden de compra se envía vía WhatsApp.',
+        link: '#',
+        github:'#',
+        image: '/projectsimage/ecommerce.webp',
+        tags: [TAGS.HTML, TAGS.CSS, TAGS.JavaScript, TAGS.ReactJs, TAGS.Firebase]
+    },
+    {
+        title: 'E-Commerce CRUD',
+        description: 'CRUD de articulos para E-Commerce DEMO, donde el administrador puede agregar, visualizar, editar y eliminar artículos.',
+        link: '#',
+        github:'#',
+        image: '/projectsimage/test.webp',
+        tags: [TAGS.HTML, TAGS.CSS, TAGS.JavaScript, TAGS.ReactJs, TAGS.Tailwind, TAGS.NodeJs, TAGS.Firebase]
+    },
+    {
+        title: 'Weather App',
+        description: 'App que permite consultar clima, filtrando por país y ciudad.',
+        link: '#',
+        github:'#',
+        image: '/projectsimage/weatherapp.webp',
+        tags: [TAGS.HTML, TAGS.CSS, TAGS.JavaScript, TAGS.ReactJs, TAGS.Tailwind]
+    },
+    {
+        title: 'To do List',
+        description: 'App para administrar tareas, podemos agregar, marcar como hechas y eliminar tareas.',
+        link: '#',
+        github:'#',
+        image: '/projectsimage/todolist.webp',
+        tags: [TAGS.HTML, TAGS.CSS, TAGS.JavaScript]
+    },
+    
+]
+---
+<div class="flex flex-col gap-y-16">
+    {
+        PROJECTS.map(({ title, description, tags, image, link, github }) => (
+            <article class="pt-8 border border-white/20 rounded-xl shadow-xl shadow-white/5 ">
+                <div class="px-8">
+                    <h3 class="text-2xl font-semibold text-teal-500 mb-2">{title}</h3>
+                    <p class="text-lg mb-4 text-pretty">{description}</p>
+                    <ul class="flex gap-x-4 flex-row mb-4">
+                        {tags.map((tag) => (
+                            <li>
+                                <span class="flex items-center gap-x-2 rounded-full border border-white/10 text-white text-xs bg-white/5 transition hover:bg-white/10 py-1 px-2">
+                                    <tag.icon class="size-5"/>
+                                    {tag.name}
+                                </span>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+                <img class="rounded-xl" src={image} alt={title} />
+            </article>
+        ))
+    }
+<div/>

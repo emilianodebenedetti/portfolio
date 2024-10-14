@@ -1,0 +1,36 @@
+---
+import ExperienceItem from "./icons/ExperienceItem.astro"
+const EXPERIENCE = [
+    {
+        date: 'Marzo 2024 - Actualidad',
+        title: 'Licenciatura en Tecnologías de la Información - UTEC, Universidad Tecnológica',
+        description: 'Cursando actualmente 2do semestre.',
+    },
+    {
+        date: 'Enero 2023 - Setiembre 2023',
+        title: 'Soporte TI - Infra Sistemas',
+        description: 'Empresa de facturación electrónica. Algunas caracteristicas de este trabajo fueron soporte técnico, atención al cliente, manejo de base de datos SQL, administración y mantenimiento de Servidores.',
+    },
+    {
+        date: 'Diciembre 2021 - Junio 2022',
+        title: 'Curso Desarrollo Front-End - Coder House',
+        description: 'Desarrollo Web - JavaScript - React Js.',
+    },
+    {
+        date: 'Diciembre 2019',
+        title: 'Bachillerato completo - Liceo José María Campos',
+        description: 'Bachillerato completo.',
+    }        
+] 
+
+---
+<ol class="relative border-s border-gray-200 ml-2">           
+    {
+        EXPERIENCE.map(experience => (
+            <li class="mb-10 ms-4 ">
+                <ExperienceItem { ... experience }/>
+            </li>
+        ))
+    }       
+</ol>
+

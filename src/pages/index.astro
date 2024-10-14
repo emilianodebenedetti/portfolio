@@ -1,0 +1,92 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Badge from '../components/Badge.astro'
+import IconsList from '../components/IconsList.astro';
+import LinkedinIcon from '../components/icons/LinkedinIcon.astro';
+import GitHubIcon from '../components/icons/GitHubIcon.astro';
+import MailIcon from '../components/icons/MailIcon.astro';
+import Experience from '../components/Experience.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import BooksIcon from '../components/icons/BooksIcon.astro'; 
+import Code from '../components/icons/CodeIcon.astro';
+import Projects from '../components/Projects.astro'
+import Footer from '../components/Footer.astro'
+import ButtonCV from '../components/ButtonCV.astro'
+---
+
+<Layout 
+	title="Portfolio de Emiliano Debenedetti - Desarrollador y programador web trainee."
+	description="Haz crecer tu marca con nuestras páginas web a medida. En edesarrollosweb ofrecemos servicio de desarrollo y mantenimiento de webs."
+	>
+	<main class="px-4">
+		<!-- Sobre mi -->
+		<SectionContainer id="sobre-mi" class="py-44 pb-32">
+			<img
+				class="rounded-full size-20 "
+				src="https://avatars.githubusercontent.com/u/95867386?v=4&size=40"
+				alt="profile photo"
+			/>
+			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 py-4 lg:py-10">
+				Hola, soy Emiliano <a 
+					href="https://www.linkedin.com/in/emiliano-debenedetti-223249223/" 
+					target="_blank" 
+					rel="noopener"
+					class="flex justify-center items-center"
+				>
+				<Badge>Disponible para trabajar</Badge>
+				</a>
+			</h1>
+			<h2 class="text-lg lg:text-2xl text-wrap max-w-[700px] text-white/70">
+				<span class="text-teal-400">Estudiante de programación desde 2022.</span>
+				De Mercedes, Uruguay. Actualmente cursando <span class="text-white">"Licenciatura de las Tecnologías de la Información"</span> en la 
+				<span class="text-blue-600">Universidad Tecnológica - UTEC.</span>
+			</h2>
+
+			<nav class="flex gap-2 mt-8 flex-wrap">
+				<IconsList href="https://www.linkedin.com/in/emiliano-debenedetti-223249223/">
+					<LinkedinIcon class="size-4 lg:size-6"/>
+					LinkedIn
+				</IconsList>
+				<IconsList href="https://github.com/emilianodebenedetti">
+					<GitHubIcon class="size-4 lg:size-6"/>
+					GitHub
+				</IconsList>
+				<IconsList href="mailto:emilianodebenedetti@outlook.com">
+					<MailIcon class="size-4 lg:size-6"/>
+					emilianodebenedetti@outlook.com
+				</IconsList>
+			</nav>		
+		</SectionContainer>
+
+		<!-- Educación y Experiencia Laboral -->
+		<SectionContainer id="educacion-y-experiencia">
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-2 items-center">
+				<BooksIcon class="size-7" />
+				Educación y Experiencia Laboral
+			</h2>
+			<Experience/>
+			<ButtonCV/>
+		</SectionContainer>
+		
+		<!-- Proyectos -->
+		<SectionContainer id="proyectos">
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-2 items-center">
+				<Code class="size-7" />
+				Proyectos
+			</h2>
+			<Projects/>
+		</SectionContainer>
+		
+		<!-- Servicios -->
+		<!-- <SectionContainer id="servicios" class="flex gap-6">
+			<div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+				<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Servicio 1</h5>
+				<p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+			</div>
+		</SectionContainer> -->
+		<!-- Footer -->
+
+		<Footer id="#contacto" />
+
+	</main>
+</Layout>
