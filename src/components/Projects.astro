@@ -84,14 +84,14 @@ const PROJECTS = [
         PROJECTS.map(({ title, description, tags, image, link, github }) => (
             <article class="pt-8 border border-white/20 rounded-xl shadow-xl shadow-white/5 ">
                 <div class="px-8">
-                    <h3 class="text-2xl font-semibold text-grey-600 mb-2">{title}</h3>
-                    <p class="lg:text-lg mb-4 text-pretty text-white/80">{description}</p>
+                    <h3 class="text-lg md:text-2xl font-semibold text-grey-600 mb-2">{title}</h3>
+                    <p class="text-sm md:text-lg mb-4 text-pretty text-white/80">{description}</p>
                     <ul class="flex flex-wrap gap-2 mb-4 mt-8">
                         {tags.map((tag) => (
                             <li>
                                 <span class="flex items-center gap-x-2 rounded-full border border-white/10 text-white text-xs bg-white/5 transition hover:bg-white/10 py-1 px-2">
-                                    <tag.icon class="size-5"/>
-                                    {tag.name}
+                                    <tag.icon class="size-3 md:size-5"/>
+                                    {tag.name} 
                                 </span>
                             </li>
                         ))}
