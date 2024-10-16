@@ -7,6 +7,9 @@ import ReactJs from './icons/ReactJs.astro'
 import Tailwind from './icons/Tailwind.astro'
 import Java from './icons/Java.astro'
 import Firebase from './icons/Firebase.astro'
+import GitHubIcon from './icons/GitHubIcon.astro';
+import WatchPage from './icons/WatchPage.astro';
+
 
 const TAGS = {
     HTML: {
@@ -47,32 +50,32 @@ const PROJECTS = [
     {
         title: 'E-Commerce DEMO',
         description: 'Tienda web creada con React Js, Tailwind y Firebase como base de datos y storage para las imágenes. La orden de compra se envía vía WhatsApp.',
-        link: '#',
-        github:'#',
+        link: 'https://ecomercdemo.vercel.app/',
+        github:'https://github.com/emilianodebenedetti/tienda-web',
         image: '/projectsimage/ecommerce.webp',
         tags: [TAGS.HTML, TAGS.CSS, TAGS.JavaScript, TAGS.ReactJs, TAGS.Firebase]
     },
     {
         title: 'E-Commerce CRUD',
         description: 'CRUD de articulos para E-Commerce DEMO, donde el administrador puede agregar, visualizar, editar y eliminar artículos.',
-        link: '#',
-        github:'#',
+        link: 'https://e-commerce-crud.vercel.app/',
+        github:'https://github.com/emilianodebenedetti/ECommerce-CRUD',
         image: '/projectsimage/ecommerceCRUD.webp',
         tags: [TAGS.HTML, TAGS.CSS, TAGS.JavaScript, TAGS.ReactJs, TAGS.Tailwind, TAGS.NodeJs, TAGS.Firebase]
     },
     {
         title: 'Weather App',
         description: 'App que permite consultar clima, filtrando por país y ciudad.',
-        link: '#',
-        github:'#',
+        link: 'https://my-weather-app-sable.vercel.app/',
+        github:'https://github.com/emilianodebenedetti/myWeatherApp',
         image: '/projectsimage/weatherapp.webp',
         tags: [TAGS.HTML, TAGS.CSS, TAGS.JavaScript, TAGS.ReactJs, TAGS.Tailwind]
     },
     {
         title: 'To do List',
         description: 'App para administrar tareas, podemos agregar, marcar como hechas y eliminar tareas.',
-        link: '#',
-        github:'#',
+        link: 'https://to-do-list-phi-lime.vercel.app/',
+        github:'https://github.com/emilianodebenedetti/to-do-list',
         image: '/projectsimage/todolist.webp',
         tags: [TAGS.HTML, TAGS.CSS, TAGS.JavaScript]
     },
@@ -82,9 +85,19 @@ const PROJECTS = [
 <div class="flex flex-col gap-y-16">
     {
         PROJECTS.map(({ title, description, tags, image, link, github }) => (
-            <article class="pt-8 border border-white/20 rounded-xl shadow-xl shadow-white/5 ">
-                <div class="px-8">
-                    <h3 class="text-lg md:text-2xl font-semibold text-grey-600 mb-2">{title}</h3>
+            <article class="pt-4 md:pt-8 border border-white/20 rounded-xl shadow-xl hover-transition hover:shadow-white/30 ">
+                <div class="px-4 md:px-8">
+                    <div class="flex justify-between items-center mb-2 md:mb-4">
+                        <h3 class="text-lg sm:text-2xl font-semibold text-grey-600 m-2">{title}</h3>
+                        <div class="flex gap-1 md:gap-4">
+                            <a href={github} target="_blank" class="flex items-center md:gap-1 px-4 py-2 text-sm text-white rounded-lg border border-white/20 hover:bg-gray-700/50 hover-transition hover:shadow-md hover:shadow-white/20 transition">
+                                <GitHubIcon class="size-3 sm:size-5">
+                            </a>
+                            <a href={link} target="_blank" class="flex items-center md:gap-1 px-4 py-2 text-sm text-white rounded-lg border border-white/20 hover:bg-blue-800/50 hover-transition hover:shadow-md hover:shadow-white/20 transition">
+                                <WatchPage class="size-3 sm:size-5">
+                            </a>
+                        </div>
+                    </div>
                     <p class="text-sm md:text-lg mb-4 text-pretty text-white/80">{description}</p>
                     <ul class="flex flex-wrap gap-2 mb-4 mt-8">
                         {tags.map((tag) => (
@@ -97,7 +110,7 @@ const PROJECTS = [
                         ))}
                     </ul>
                 </div>
-                <img class="rounded-xl" src={image} alt={title} />
+                <img class="rounded-xl" src={image} alt={title}/>
             </article>
         ))
     }
