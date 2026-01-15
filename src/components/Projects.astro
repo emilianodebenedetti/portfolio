@@ -9,6 +9,7 @@ import Java from './icons/Java.astro'
 import Firebase from './icons/Firebase.astro'
 import GitHubIcon from './icons/GitHubIcon.astro';
 import WatchPage from './icons/WatchPage.astro';
+import ViteJs from './icons/ViteJs.astro';
 
 
 const TAGS = {
@@ -43,7 +44,12 @@ const TAGS = {
     Firebase: {
         name: 'Firebase',
         icon: Firebase
-    } 
+    },
+    ViteJs: {
+        name: 'Vite JS',
+        icon: ViteJs
+    }
+
 
 }
 const PROJECTS = [
@@ -64,25 +70,17 @@ const PROJECTS = [
         tags: [TAGS.HTML, TAGS.CSS, TAGS.JavaScript, TAGS.ReactJs, TAGS.Tailwind, TAGS.NodeJs, TAGS.Firebase]
     },
     {
-        title: 'Weather App',
-        description: 'App que permite consultar clima, filtrando por país y ciudad.',
+        title: 'MG Logística',
+        description: 'App que permite crear, modificar o eliminar viajes de camiones, donde el administrador los visualiza filtrando por chofer, fecha y cliente, hay roles para administrador y chofer',
         link: 'https://my-weather-app-sable.vercel.app/',
-        github:'https://github.com/emilianodebenedetti/myWeatherApp',
-        image: '/projectsimage/weatherapp.webp',
-        tags: [TAGS.HTML, TAGS.CSS, TAGS.JavaScript, TAGS.ReactJs, TAGS.Tailwind]
-    },
-    {
-        title: 'To do List',
-        description: 'App para administrar tareas, podemos agregar, marcar como hechas y eliminar tareas.',
-        link: 'https://to-do-list-phi-lime.vercel.app/',
-        github:'https://github.com/emilianodebenedetti/to-do-list',
-        image: '/projectsimage/todolist.webp',
-        tags: [TAGS.HTML, TAGS.CSS, TAGS.JavaScript]
+        github:'https://github.com/emilianodebenedetti/mg-logistica',
+        image: '/projectsimage/mg-logistica.webp',
+        tags: [TAGS.JavaScript, TAGS.ReactJs, TAGS.Tailwind, TAGS.NodeJs, TAGS.ViteJs]
     }
 ]
----
+---s
 <div class="flex flex-col gap-y-16">
-    {
+    {       
         PROJECTS.map(({ title, description, tags, image, link, github }) => (
             <article class="pt-4 md:pt-8 border border-white/20 rounded-xl shadow-xl hover-transition hover:shadow-white/30 ">
                 <div class="px-4 md:px-8">
@@ -113,4 +111,4 @@ const PROJECTS = [
             </article>
         ))
     }
-<div/>
+<sdiv/>

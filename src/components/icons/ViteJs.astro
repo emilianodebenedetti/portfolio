@@ -1,0 +1,31 @@
+---
+interface Props {
+    size?: number;
+    class?: string;
+}
+
+const { size = 24, class: className } = Astro.props;
+---
+
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 261 261"
+    width={size}
+    height={size}
+    class={className}
+>
+    <defs>
+        <linearGradient id="viteGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#fd63b6;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#f9ad1d;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+    <polygon points="130.5,10 260,130.5 130.5,260 1,130.5" fill="url(#viteGradient)" />
+    <polygon points="130.5,60 210,130.5 130.5,200 51,130.5" fill="white" />
+</svg>
+
+<style>
+    svg {
+        display: inline-block;
+    }
+</style>
