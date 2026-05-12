@@ -1,8 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Badge from '../components/Badge.astro'
+/* import Badge from '../components/Badge.astro' */
 import IconsList from '../components/IconsList.astro';
-import LinkedinIcon from '../components/icons/LinkedinIcon.astro';
+/* import LinkedinIcon from '../components/icons/LinkedinIcon.astro'; */
 import GitHubIcon from '../components/icons/GitHubIcon.astro';
 import MailIcon from '../components/icons/MailIcon.astro';
 import Experience from '../components/Experience.astro';
@@ -15,8 +15,8 @@ import ButtonCV from '../components/ButtonCV.astro'
 ---
 
 <Layout 
-	title="Emiliano Debenedetti - Desarrollador Web Jr."
-	description="Portfolio Desarrollador Web Frontend."
+	title="Emiliano Debenedetti - Desarrollador Full Stack."
+	description="Desarrollador Full Stack."
 	>
 	<main class="px-4">
 		<!-- Sobre mi -->
@@ -27,14 +27,20 @@ import ButtonCV from '../components/ButtonCV.astro'
 				alt="Profile Photo"
 			/>
 			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 py-4 lg:py-10">
-				Hola, soy Emiliano 👋
+				Hola, por aquí Emiliano 👋
 			</h1>
 			<h2 class="text-md md:text-2xl text-wrap max-w-[700px] text-white/70">
 				<span class="text-teal-400">Estudiante de programación desde 2022.</span>
-				De Mercedes, Uruguay. Actualmente cursando <span class="text-white">"Licenciatura en Tecnologías de la Información"</span> en la 
-				<span class="text-blue-600">Universidad Tecnológica - UTEC.</span>
+				Actualmente cursando <span class="text-white">"Licenciatura en Tecnologías de la Información" (Plan 2024)</span> en  
+				<span class="text-blue-600">UTEC.</span> y trabajando como <span class="text-white">Analista en Infraestructura TI Jr.</span> en <span class="text-blue-600">Rockshore Inversores.</span>
 			</h2>
-
+			<!-- quiero agregar aqui abajo un pin con la informacion de donde vivo -->
+			<div class="flex items-center gap-2 mt-4">
+				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-teal-400" viewBox="0 0 20 20" fill="currentColor">
+					<path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+				</svg>
+				<p class="text-white/70">Montevideo, Uruguay</p>
+			</div>
 			<nav class="flex gap-2 lg:gap-x-6 mt-8 flex-wrap bg-inherit text-white/80 dark:text-white/80">
 				<IconsList href="https://github.com/emilianodebenedetti">
 					<GitHubIcon class="size-6"/>
